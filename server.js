@@ -11,6 +11,9 @@ zcache['index.html'] = fs.readFileSync('./index.html'); //  Cache index.html
 // Create "express" server.
 var app  = express.createServer();
 
+app.configure(function () {
+  app.use(express.static(__dirname + '/public'));
+});
 
 /*  =====================================================================  */
 /*  Setup route handlers.  */
