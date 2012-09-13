@@ -32,6 +32,9 @@ app.get('/', function(req, res){
     res.send(zcache['index.html'], {'Content-Type': 'text/html'});
 });
 
+app.get('/hello', function (req, res) {
+  res.send('Hello world', {'Content-Type': 'text/plain'});
+});
 
 //  Get the environment variables we need.
 var ipaddr  = process.env.OPENSHIFT_INTERNAL_IP;
@@ -65,4 +68,3 @@ app.listen(port, ipaddr, function() {
    console.log('%s: Node server started on %s:%d ...', Date(Date.now() ),
                ipaddr, port);
 });
-
