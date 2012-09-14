@@ -43,6 +43,6 @@ app.get('/users', user.list);
 // Handler for GET /health
 app.get('/health', function(req, res){ res.send('1'); });
 
-http.createServer(app).listen(app.get('port'), function(){
+http.createServer(app).listen(port, ipaddr, function(){
   console.log("Express server listening on port " + app.get('port'));
 });
