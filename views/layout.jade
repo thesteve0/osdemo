@@ -1,0 +1,16 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    block content
+
+    script(src="/js/jquery-1.8.1.min.js")
+    script(src="/js/underscore-min.js")
+    script(src="/js/backbone-min.js")
+    script(src="/js/application.js")
+
+    script(type="text/template")#appTemplate
+      div
+        h1 App Demo
